@@ -1,12 +1,12 @@
 $(document).ready(function () {
 
-    $('#menu').click(function () {
+    $('.menu').click(function () {
         $(this).toggleClass('fa-times');
         $('.navbar').toggleClass('nav-toggle');
     });
 
     $(window).on('scroll load', function () {
-        $('#menu').removeClass('fa-times');
+        $('.menu').removeClass('fa-times');
         $('.navbar').removeClass('nav-toggle');
 
         if (window.scrollY > 60) {
@@ -41,52 +41,9 @@ $(document).ready(function () {
 
 
 
-// <!-- typed js effect ends -->
-
-async function fetchData(type = "skills") {
-    let response;
-    type === "skills" ? 
-        response = await fetch("skills.json") 
-        : 
-        response = await fetch("./projects/projects.json");
-    const data = await response.json();
-    return data;
-}
-
-function showSkills(skills) {
-    let skillsContainer = document.getElementById("skillsContainer");
-    let skillHTML = "";
-    skills.forEach(skill => {
-        skillHTML += `
-        <div class="bar">
-              <div class="info">
-                <img src=${skill.icon} alt="skill" />
-                <span>${skill.name}</span>
-              </div>
-            </div>`
-    });
-    skillsContainer.innerHTML = skillHTML;
-}
-
-
-
-
-fetchData().then(data => {
-    showSkills(data);
-});
-
-fetchData("projects").then(data => {
-    showProjects(data);
-});
-
 const cursor = document.getElementById('cursor');
 
-// Update the position of the circle based on mouse movement
 document.addEventListener('mousemove', (event) => {
-  const mouseX = event.clientX + window.scrollX; // Account for horizontal scrolling
-  const mouseY = event.clientY + window.scrollY; // Account for vertical scrolling
-
-  // Adjust the position to center the circle correctly
-  cursor.style.left = `${mouseX - cursor.offsetWidth / 2}px`;
-  cursor.style.top = `${mouseY - cursor.offsetHeight / 2}px`;
+  cursor.style.left = `${event.clientX}px`;
+  cursor.style.top = `${event.clientY}px`;
 });
