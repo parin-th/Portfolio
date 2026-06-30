@@ -1,10 +1,10 @@
 console.log("Site updated successfully! 3:19 PM 6/30/26.");
 $(document).ready(function () {
 
-    $('.menu').click(function () {
-        $(this).toggleClass('fa-times');
-        $('.navbar').toggleClass('nav-toggle');
-    });
+    $('#menu').click(function () {
+    $(this).toggleClass('fa-times');
+    $('.navbar').toggleClass('nav-toggle');
+});
 
     $(window).on('scroll load', function () {
         $('.menu').removeClass('fa-times');
