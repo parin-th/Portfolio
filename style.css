@@ -959,7 +959,7 @@ header .navbar ul li a:hover {
 .skills {
   padding: 5rem 9%;
   background-color: #f7f7f7;
-  min-height: 100vh;
+  min-height: auto;
 }
 
 .skills h2 {
@@ -1087,4 +1087,12 @@ header .navbar ul li a:hover {
 
 .img-container > div .bold {
     color: #000000 !important;
+}
+
+/* Amazon Link Styling */
+.achievements .published-author a,
+.achievements .published-author a:visited,
+.achievements .published-author a .bold {
+    color: #0000FF !important;
+    text-decoration: underline !important;
 }
