@@ -1081,3 +1081,15 @@ header .navbar ul li a:hover {
   75%  {background-color:rgba(0, 255, 0, 0.4)}
   100% {background-color:rgba(255, 0, 0, 0.4)}
 }
+
+.img-container > div .h1 {
+    color: #222222 !important;
+}
+
+.img-container > div .p {
+    color: #555555 !important;
+}
+
+.img-container > div .bold {
+    color: #000000 !important;
+}
