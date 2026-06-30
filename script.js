@@ -1,3 +1,4 @@
+console.log("Site updated successfully! 3:06 PM 6/30/26.");
 $(document).ready(function () {
 
     $('.menu').click(function () {
